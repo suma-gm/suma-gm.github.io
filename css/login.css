@@ -1,14 +1,14 @@
 .login-container {
     position: absolute;
     top: 50%;
-    right: 3%;
+    right: 10%;
     transform: translate(-0, -50%);
-    width: 33%;
+    width: 37%;
     color: white;
 }
 
 .login-bg {
-    background-image: url('../images/food-heart-bg.jpg');
+    background-image: url('../images/top-view-food-frame-with-copy-space.jpg');
     background-size: cover;
 }
 
@@ -40,12 +40,12 @@
 
 .input-field {
     border: 0px;
-    background: #322a23bf;
+    background: #1c1b1a94;
     color: lightgray;
 }
 
 .input-field:focus {
-    background: #322a23bf;
+    background: #1c1b1a94;
     box-shadow: 0 0;
     color: lightgray;
 }
