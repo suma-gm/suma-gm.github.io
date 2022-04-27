@@ -1,0 +1,85 @@
+.list-item {
+    color: white;
+}
+
+.nav-style {
+    list-style: none;
+}
+
+.list-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-title {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: white;
+}
+
+body {
+    color: rgb(77, 77, 77);
+}
+
+.header-bar {
+    background-color: #b31717;
+    height: 60px;
+}
+
+.food-details-view {
+    overflow: hidden;
+}
+
+.food-details-container {
+    overflow-x: auto;
+    position: relative;
+    max-height: 91vh;
+}
+
+.food-img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.food-ingredients {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 550px;
+    font-size: 25px;
+}
+
+.food-price {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.food-rating, .rating {
+    background-color: rgb(2, 168, 2);
+    padding: 10px 20px;
+    width: 60px;
+    font-size: 16px;
+    color: white;
+    margin-bottom: unset;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.food-name {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.sub-heading {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.user-name {
+    font-size: large;
+    font-weight: 500;
+}

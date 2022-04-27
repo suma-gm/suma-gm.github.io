@@ -1,0 +1,59 @@
+.login-container {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translate(-0, -50%);
+    width: 33%;
+    color: lightgray;
+}
+
+.login-bg {
+    background-image: url('../images/food-heart-bg.jpg');
+    background-size: cover;
+}
+
+.welcome-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+
+.nav-bar {
+    list-style: none;
+}
+
+.error-text {
+    color: red !important;
+}
+
+.list-item {
+    padding: 15px;
+    cursor: pointer;
+}
+
+.list-item a {
+    color: white;
+}
+
+.login-title {
+    font-size: 20px;
+}
+
+.input-field {
+    border: 0px;
+    background: #322a23bf;
+    color: lightgray;
+}
+
+.input-field:focus {
+    background: #322a23bf;
+    box-shadow: 0 0;
+    color: lightgray;
+}
+
+.link-text {
+    color: lightgray;
+}
+
+.link-text:hover {
+    color: lightgray;
+}
