@@ -1,13 +1,17 @@
 function signup() {
-    if (isFormValid()) {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const name = document.getElementById('name').value;
+
+    if (isFormValid(email, password, name)) {
+        const users = [...JSON.parse(localStorage.getItem('users')), {name, email, password}];
+        localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem('current-user', JSON.stringify({name, email, password}));
         document.getElementById('moveToFoodList').click();
     }
 }
 
-function isFormValid() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const name = document.getElementById('name').value;
+function isFormValid(email, password, name) {
     return validateName(name) && validateEmail(email) && validatePassword(password);
 }
 

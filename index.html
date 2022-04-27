@@ -10,14 +10,15 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/index.css">
+        <script src="./js/index.js"></script>
     </head>
-    <body class="img-bg">
+    <body class="img-bg" onload="onLoad()">
         <header>
-            <ul class="nav-bar w-100 d-flex align-items-center justify-content-between">
-                <div class="d-flex justify-content-center align-items-center"><li class="list-item app-name" style="cursor: auto;">Food World</div>
+            <ul class="nav-bar w-100 d-flex align-items-center justify-content-between nav">
+                <div class="d-flex justify-content-center align-items-center"><li class="list-item app-name nav-item" style="cursor: auto;">Food World</div>
                 <div class="d-flex justify-content-center align-items-center">
-                    <li class="list-item"><a href="./html/login.html">Log in</a></li>
-                    <li class="list-item"><a href="./html/signup.html">Sign up</a></li>
+                    <li class="list-item nav-item"><a href="./html/login.html" class="nav-link">Log in</a></li>
+                    <li class="list-item nav-item"><a href="./html/signup.html" class="nav-link">Sign up</a></li>
                 </div>
             </ul>
             <div class="title-view">

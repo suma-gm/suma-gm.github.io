@@ -1,12 +1,20 @@
 function login() {
-    if (isFormValid()) {
-        document.getElementById('moveToFoodList').click();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (isFormValid(email, password)) {
+        const users = JSON.parse(localStorage.getItem('users'));
+        console.log(users);
+        const userIndex = users.findIndex(user => user.email === email && user.password === password)
+        if (userIndex !== -1) {
+            localStorage.setItem('current-user', JSON.stringify(users[userIndex]));
+            document.getElementById('moveToFoodList').click();
+        }
+        else alert('You are not an authorized user, please signup to continue');
     }
 }
 
-function isFormValid() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+function isFormValid(email, password) {
     return validateEmail(email) && validatePassword(password);
 }
 
