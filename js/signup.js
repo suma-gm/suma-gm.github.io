@@ -2,13 +2,21 @@ function signup() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const name = document.getElementById('name').value;
+    const existingUsers = JSON.parse(localStorage.getItem('users'));
+    const isUserExists = isUserAlreadyExists(existingUsers, email);
 
-    if (isFormValid(email, password, name)) {
-        const users = [...JSON.parse(localStorage.getItem('users')), {name, email, password}];
+    if (isFormValid(email, password, name) && !isUserExists) {
+        const users = [...existingUsers, {name, email, password}];
         localStorage.setItem('users', JSON.stringify(users));
         localStorage.setItem('current-user', JSON.stringify({name, email, password}));
         document.getElementById('moveToFoodList').click();
+    } else if (isUserExists) {
+        alert('User already registered');
     }
+}
+
+function isUserAlreadyExists(existingUsers, userEmail) {
+    return existingUsers.findIndex(user => user.email.toLowerCase() === userEmail.toLowerCase()) !== -1;
 }
 
 function isFormValid(email, password, name) {
